@@ -75,35 +75,104 @@ function reverse(str) {
 
 
 function onlyVowels(str) {
- 
-  
-    let VowelStr = '';
-    
-    for (let i = 0; i <= str.length; i++) {
-      const isVowel = ( 'a', 'e', 'i', 'o', 'u');
-      if (isVowel) {
-        VowelStr = isVowel;
+let output = "";
+for (const char of str) {
+  const lowerCaseChar = char.toLowerCase();
+  if (lowerCaseChar === 'a' || 
+      lowerCaseChar === 'e' ||
+      lowerCaseChar === 'i' ||
+      lowerCaseChar === 'o' ||
+      lowerCaseChar === 'a' ){
+        output += char;
       }
-    }
+      }
     
-    return VowelStr;
+        return output;
+    }
+
+    // let VowelStr = '';
+    
+  //   for (let i = 0; i <= str.length; i++) {
+  //     const isVowel = ( 'a', 'e', 'i', 'o', 'u');
+  //     if () {
+  //       VowelStr = isVowel;
+  //     }
+  //   }
+    
+  //   return VowelStr;
+  // }
+
+
+function crazyCase(str) {
+  let output = '';
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    if (i % 2 === 0){
+      output += char.toLowerCase();
+
+    }else {
+      output += char.toUpperCase();
+    }
+  }
+  return output
   }
 
 
 
-function crazyCase(str) {
-
-}
-
 function titleCase(str) {
-
+  let output ='';
+  let shouldCap = true
+  for (const char of str) {
+   if (shouldCap){
+     output += char.toUpperCase();
+   } else {
+     output += char.toLowerCase()
+   }  
+  
+   if (char === " "){
+     shouldCap = true;
+   } else{
+     shouldCap = false;
+   } 
+  }
+  return output 
 }
 
 function camelCase(str) {
-
+  let output = '';
+  let shouldCap = false;
+  for (const char of str) {
+    if (char !== ' ') {
+      if(shouldCap) {
+        output += char.toUpperCase();
+      } else {
+        output += char.toLowerCase()
+      }
+    } 
+    if (char === ' ') {
+      shouldCap= true;
+    } else {
+      shouldCap = false;
+    }
+  }
+  return output
 }
 
 function crazyCase2ReturnOfCrazyCase(str) {
+  let output = '';
+  let shouldCap = false;
+  for (const char of str) {
+    if (shouldCap) {
+       output += char.toUpperCase();
+      } else {
+        output += char.toLowerCase()
+      }
+    
+    if (char !== ' ') {
+     shouldCap = !shouldCap;
+    }
+  }
+  return output
 
 }
   
