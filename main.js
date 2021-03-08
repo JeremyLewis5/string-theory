@@ -1,6 +1,118 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+function xify(str) {
+let newStr = "";
+for (const letter of str){
+  const letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
+if (newStr === letter) {
+  newStr =  + "x"
+}  
+return newStr
+}  
+  //return newStr
+
+  }
+
+  function yellingChars(str) {
+    let outputStr = '';
+  for (const char of str) {
+    if (char === '') {
+      outputStr = outputStr + '!';}
+    // } else {
+    //   outputStr = outputStr + char;
+    // }
+  }
+  return outputStr;
+}
+
+function numberedChars(str) {
+
+}
+
+function exclaim(str){
+  let outputStr = '';
+  for (const char of str) {
+    const toReplace = '.'
+    if (char === toReplace) {
+      outputStr =  '!';
+    
+    }
+  }
+  return outputStr;
+}
+
+function repeatIt(str, num) {
+  let outputStr = "";
+  if (num < 0) 
+  {return ""}
+  //let num1 = "";
+    for(let i = 0; i <num; i++ ) {
+        outputStr += str;
+    }
+    return outputStr;
+}
+
+function truncate(str) {
+
+}
+
+function ciEmailify(str) {
+  newStr = '';
+  for (let i =0;  i < str.length; i++) {
+    newStr = str + '.' + '@codeimmersives.com' ;
+}
+  return newStr;
+}
+
+function reverse(str) {
+  newStr = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+}
+  return newStr;
+}
+
+
+function onlyVowels(str) {
+ 
+  
+    let VowelStr = '';
+    
+    for (let i = 0; i <= str.length; i++) {
+      const isVowel = ( 'a', 'e', 'i', 'o', 'u');
+      if (isVowel) {
+        VowelStr = isVowel;
+      }
+    }
+    
+    return VowelStr;
+  }
+
+
+
+function crazyCase(str) {
+
+}
+
+function titleCase(str) {
+
+}
+
+function camelCase(str) {
+
+}
+
+function crazyCase2ReturnOfCrazyCase(str) {
+
+}
+  
+  
+  
+
+
+
+  
 
 
 
